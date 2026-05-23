@@ -17,7 +17,7 @@ brew tap lynxlangya/tap
 Install Lexi:
 
 ```sh
-brew install --cask --no-quarantine lexi
+brew install --cask lexi
 ```
 
 Upgrade installed apps:
@@ -68,7 +68,7 @@ Current casks:
    ```sh
    brew style Casks/<app>.rb
    brew update
-   brew install --cask --no-quarantine <app>
+   brew install --cask <app>
    ```
 
 7. Commit and push the cask update.
@@ -123,7 +123,7 @@ brew tap lynxlangya/tap
 安装 Lexi：
 
 ```sh
-brew install --cask --no-quarantine lexi
+brew install --cask lexi
 ```
 
 后续升级：
@@ -174,7 +174,7 @@ homebrew-tap/
    ```sh
    brew style Casks/<app>.rb
    brew update
-   brew install --cask --no-quarantine <app>
+   brew install --cask <app>
    ```
 
 7. 提交并推送 cask 更新。
