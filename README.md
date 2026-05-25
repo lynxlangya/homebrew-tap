@@ -52,13 +52,13 @@ Current casks:
 2. Package the `.app` bundle:
 
    ```sh
-   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.0.0-macos.zip
+   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.1.0-macos.zip
    ```
 
 3. Calculate the SHA-256 checksum:
 
    ```sh
-   shasum -a 256 Lexi-2.0.0-macos.zip
+   shasum -a 256 Lexi-2.1.0-macos.zip
    ```
 
 4. Upload the zip file to the app repository's GitHub Release.
@@ -158,13 +158,13 @@ homebrew-tap/
 2. 打包 `.app`：
 
    ```sh
-   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.0.0-macos.zip
+   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.1.0-macos.zip
    ```
 
 3. 计算 SHA-256：
 
    ```sh
-   shasum -a 256 Lexi-2.0.0-macos.zip
+   shasum -a 256 Lexi-2.1.0-macos.zip
    ```
 
 4. 把 zip 上传到对应 App 的 GitHub Release。

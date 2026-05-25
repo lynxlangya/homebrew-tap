@@ -1,10 +1,10 @@
 cask "lexi" do
-  version "2.0.1"
-  sha256 "fe04bc95efa80c8f1c98c76591a80a31802f4d4d2a76b96d75a0ca7a8b4be63b"
+  version "2.1.0"
+  sha256 "7b0d8b04738a50455f7e194c7ff22bb82a0b950b4308fe6771ca74fdb6f5cc77"
 
   url "https://github.com/lynxlangya/lexi/releases/download/v#{version}/Lexi-#{version}-macos.zip"
   name "Lexi"
-  desc "Bilingual reading and selection translation app"
+  desc "Bilingual EPUB reader with AI read-aloud and selection translation"
   homepage "https://github.com/lynxlangya/lexi"
 
   depends_on macos: :tahoe
