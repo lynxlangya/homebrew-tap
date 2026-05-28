@@ -1,6 +1,6 @@
 cask "lexi" do
-  version "2.1.0"
-  sha256 "7b0d8b04738a50455f7e194c7ff22bb82a0b950b4308fe6771ca74fdb6f5cc77"
+  version "2.1.1"
+  sha256 "cd7ce48c3b50265ae617c8f3154863aecd97912222627d68b0aeb5a27549a77b"
 
   url "https://github.com/lynxlangya/lexi/releases/download/v#{version}/Lexi-#{version}-macos.zip"
   name "Lexi"
