@@ -38,13 +38,14 @@ homebrew-tap/
 ```
 
 Each app gets one cask under `Casks/`. The cask points to a versioned release
-asset, usually a zip uploaded to that app's GitHub Releases page.
+asset, usually a Developer ID signed and Apple-notarized zip hosted on
+Cloudflare R2.
 
 Current casks:
 
 | Cask | Source | Artifact |
 |---|---|---|
-| `lexi` | [`lynxlangya/lexi`](https://github.com/lynxlangya/lexi) | `Lexi-<version>-macos.zip` |
+| `lexi` | [`lynxlangya/lexi`](https://github.com/lynxlangya/lexi) | `Lexi-<version>-notarized.zip` |
 
 ## Add Or Update An App
 
@@ -52,16 +53,16 @@ Current casks:
 2. Package the `.app` bundle:
 
    ```sh
-   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.1.0-macos.zip
+   ditto -c -k --keepParent Lexi.app Lexi-2.1.1-notarized.zip
    ```
 
 3. Calculate the SHA-256 checksum:
 
    ```sh
-   shasum -a 256 Lexi-2.1.0-macos.zip
+   shasum -a 256 Lexi-2.1.1-notarized.zip
    ```
 
-4. Upload the zip file to the app repository's GitHub Release.
+4. Upload the zip file to the app's versioned R2 release path.
 5. Add or update `Casks/<app>.rb` with the new `version`, `sha256`, and `url`.
 6. Validate locally:
 
@@ -80,7 +81,7 @@ cask "app-name" do
   version "2.0.0"
   sha256 "<sha256>"
 
-  url "https://github.com/owner/repo/releases/download/v#{version}/App-#{version}-macos.zip"
+  url "https://download.example.com/app/releases/#{version}/App-#{version}-notarized.zip"
   name "App Name"
   desc "Short product description without the platform name"
   homepage "https://github.com/owner/repo"
@@ -143,14 +144,14 @@ homebrew-tap/
   README.md
 ```
 
-每个 App 在 `Casks/` 下对应一个 cask 文件。cask 指向该 App 自己 GitHub Releases
-里的版本化安装包。
+每个 App 在 `Casks/` 下对应一个 cask 文件。cask 指向该 App 的版本化安装包，
+通常是托管在 Cloudflare R2 上、已经 Developer ID 签名并通过 Apple notarization 的 zip。
 
 当前 cask：
 
 | Cask | 源码仓库 | 安装包 |
 |---|---|---|
-| `lexi` | [`lynxlangya/lexi`](https://github.com/lynxlangya/lexi) | `Lexi-<version>-macos.zip` |
+| `lexi` | [`lynxlangya/lexi`](https://github.com/lynxlangya/lexi) | `Lexi-<version>-notarized.zip` |
 
 ## 新增或更新 App
 
@@ -158,16 +159,16 @@ homebrew-tap/
 2. 打包 `.app`：
 
    ```sh
-   ditto -c -k --sequesterRsrc --keepParent Lexi.app Lexi-2.1.0-macos.zip
+   ditto -c -k --keepParent Lexi.app Lexi-2.1.1-notarized.zip
    ```
 
 3. 计算 SHA-256：
 
    ```sh
-   shasum -a 256 Lexi-2.1.0-macos.zip
+   shasum -a 256 Lexi-2.1.1-notarized.zip
    ```
 
-4. 把 zip 上传到对应 App 的 GitHub Release。
+4. 把 zip 上传到 App 的版本化 R2 release 路径。
 5. 更新 `Casks/<app>.rb` 的 `version`、`sha256` 和 `url`。
 6. 本地验证：
 

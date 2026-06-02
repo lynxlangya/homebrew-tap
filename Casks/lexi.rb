@@ -1,11 +1,11 @@
 cask "lexi" do
   version "2.1.1"
-  sha256 "cd7ce48c3b50265ae617c8f3154863aecd97912222627d68b0aeb5a27549a77b"
+  sha256 "b8403129a50840c80073b3dcd1ce5383f7891c544082cdbd4bdf08f6b98e26b1"
 
-  url "https://github.com/lynxlangya/lexi/releases/download/v#{version}/Lexi-#{version}-macos.zip"
+  url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}-notarized.zip"
   name "Lexi"
   desc "Bilingual EPUB reader with AI read-aloud and selection translation"
-  homepage "https://github.com/lynxlangya/lexi"
+  homepage "https://lexi.wangyun.fan"
 
   depends_on macos: :tahoe
 
@@ -18,11 +18,5 @@ cask "lexi" do
 
   caveats <<~EOS
     Lexi requires Accessibility permission for global selection translation.
-
-    This MVP build is not Apple-notarized. If macOS blocks the first launch,
-    allow it from System Settings -> Privacy & Security, or run:
-
-      xattr -dr com.apple.quarantine /Applications/Lexi.app
-      open /Applications/Lexi.app
   EOS
 end
