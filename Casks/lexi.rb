@@ -1,8 +1,9 @@
 cask "lexi" do
   version "2.1.1"
-  sha256 "b8403129a50840c80073b3dcd1ce5383f7891c544082cdbd4bdf08f6b98e26b1"
+  sha256 "b59e2dfde42cd58c599d9ee9a79f2dc27142f4076e42bafead2a8bef27bcc926"
 
-  url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}-notarized.zip"
+  url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}.dmg",
+      verified: "pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/"
   name "Lexi"
   desc "Bilingual EPUB reader with AI read-aloud and selection translation"
   homepage "https://lexi.wangyun.fan"
