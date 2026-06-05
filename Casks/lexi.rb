@@ -1,8 +1,8 @@
 cask "lexi" do
   version "2.1.1"
-  sha256 "b59e2dfde42cd58c599d9ee9a79f2dc27142f4076e42bafead2a8bef27bcc926"
+  sha256 "6fd145f23662cb1d29d6347af6ea5fecb240787c04a134c4a58837b8c10942f8"
 
-  url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}.dmg",
+  url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}-installer.dmg",
       verified: "pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/"
   name "Lexi"
   desc "Bilingual EPUB reader with AI read-aloud and selection translation"
