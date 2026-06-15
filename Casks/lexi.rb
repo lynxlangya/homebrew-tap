@@ -1,6 +1,6 @@
 cask "lexi" do
-  version "2.1.2"
-  sha256 "bad759513d6ef047a2eef452a3abd7421b82523911dc84cbd687d03ab283d1c4"
+  version "2.1.3"
+  sha256 "1041a299e7c7de265f7d2ca9986f2b6a677a3cffcb38814f4253dd7411daf3de"
 
   url "https://pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/#{version}/Lexi-#{version}-installer.dmg",
       verified: "pub-971ee03b82ad411a9bb26c62a06ca755.r2.dev/lexi/releases/"
